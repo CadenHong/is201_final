@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Color Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .color-box {
+      width: 300px;
+      height: 200px;
+      background-color: #cccccc;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #008CBA;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #005f6b;
+    }
+
+    .button:active {
+      background-color: #004f5c;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Random Color Generator</h1>
+    <div class="color-box" id="colorBox"></div>
+    <button class="button" id="generateColor">Generate Color</button>
+  </div>
+
+  <script>
+    // List of colors
+    const colors = ['white', 'grey', 'yellow', 'orange', 'green', 'blue', 'purple', 'brown', 'black', 'red'];
+
+    // Event listener for button click
+    document.getElementById('generateColor').addEventListener('click', function() {
+      // Get a random index from the colors array
+      const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+      // Set the background color of the color box to the random color
+      document.getElementById('colorBox').style.backgroundColor = randomColor;
+    });
+  </script>
+
+</body>
+</html>

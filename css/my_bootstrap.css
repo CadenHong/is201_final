@@ -1,0 +1,23 @@
+.my_special_text{
+    text-decoration: underline;
+}
+
+.my_background_color{
+    background-color: rgb(74, 183, 184) !important;
+}
+
+.my_text_color{
+    color: rgb(74, 183, 184) !important;
+}
+
+.my_dates{
+    font-family:cursive;
+    color: rgb(74, 183, 184) !important;
+}
+
+
+
+a:hover{
+    font-size: larger;
+    color:black;
+}
